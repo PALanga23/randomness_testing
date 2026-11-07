@@ -25,4 +25,4 @@ def flawed_bits(n_bits=1_000_000, seed=0):
         yield state
 
 
-bit = list(flawed_bits())
+bits = ''.join(map(str, flawed_bits()))

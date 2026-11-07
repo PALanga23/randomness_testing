@@ -11,7 +11,7 @@ G = int(
 )
 SEED = int("7AB36982CE1ADF832019CDFEB2393CABDF0214EC", 16)
 
-def flawed_bits(bits=1_000_000, seed=SEED):
+def flawed_bits(n_bits=1_000_000, seed=SEED):
 
     if n_bits < 0:
         raise ValueError("Number of bits must be non-negative")
@@ -29,4 +29,4 @@ def flawed_bits(bits=1_000_000, seed=SEED):
     return "".join(chunks)[:n_bits]
 
 
-bits = flawed_bits()    
+bits = flawed_bits()   

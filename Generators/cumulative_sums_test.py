@@ -17,7 +17,7 @@ def flawed_bits(n_bits=1_000_000, seed=SEED):
 
     if n_bits < 0:
         raise ValueError("Number of bits must be non-negative")
-    if not  < seed < (1 << R):
+    if not 0  < seed < (1 << R):
         raise ValueError(f"Seed must be a nonzero {R}-bit integer")
     if math.gcd(E, (P-1) * (Q-1)) != 1 or 80 * E >= N:
         raise ValueError("Invalid demonstration parameters")
@@ -36,5 +36,3 @@ def flawed_bits(n_bits=1_000_000, seed=SEED):
 
 
 bits = flawed_bits()
-
-
