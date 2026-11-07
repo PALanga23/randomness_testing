@@ -21,3 +21,6 @@ def flawed_bits(n_bits=1_000_000, seed=b"markov-demo-1"):
 
 
 bits = flawed_bits()
+
+with open("bitstream_01.txt", "w", encoding="utf-8") as file:
+    file.write(bits)
