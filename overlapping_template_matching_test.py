@@ -1,6 +1,10 @@
 
 """Flawed RNG mimicking IBM's RANDU generator"""
 def flawed_bits(n_bits=1_000_000):
+    
+    if n_bits < 0:
+        raise ValueError("Number of bits must be non-negative")
+
     state = 1
     chunks = []
 
